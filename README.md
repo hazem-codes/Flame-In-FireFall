@@ -35,6 +35,20 @@ frontend/src/lib/api.ts  ──HTTP──▶  backend/app.py  ──▶  pipelin
 
 In production the backend serves the built frontend (`frontend/dist`), so both use the same address. In development, `frontend/vite.config.ts` forwards `/api` to the backend on port 5000.
 
+## Prerequisites
+
+Before running the project, make sure the following software is installed:
+
+- **Python 3.14.x** – Required for the backend. Python must be available through the system `PATH`.
+  - Download: https://www.python.org/downloads/
+
+- **Node.js 22.x LTS** – Required for the frontend build and development server. Node.js must be available through the system `PATH`. npm is included with the Node.js installation.
+  - Download: https://nodejs.org/en/download
+
+The `start.bat` and `dev.bat` launchers automatically check for the required versions and stop with an error message if either requirement is not met.
+
+Python and frontend dependencies are installed automatically by the respective launch scripts. No separate installation of project libraries is necessary.
+
 ## Run
 
 **Normal use:** double-click `start.bat`, then open http://127.0.0.1:5000. The first run installs packages and builds the frontend (needs Node.js), which takes a few minutes.
